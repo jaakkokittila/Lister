@@ -1,0 +1,125 @@
+#container {
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    width: 360px;
+    height: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-family: 'Rambla';
+}
+
+.blueborder {
+    border: 1px solid #4478A9;
+    border-radius: 5px;
+}
+
+.bluetext {
+    color: #4478A9;
+}
+
+#title {
+    text-align: center;
+    margin-top: 0.5em;
+    min-width: 100px;
+}
+
+#list-component {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list {
+    width: 85px;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+#plus {
+    float: right;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 1.5em;
+    margin-right: 10px;
+    margin-top: -15px;
+}
+
+.list:hover, #plus:hover, #edit-button:hover, #back-button:hover {
+    background-color: #4478A9;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#list-view-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+#list-name {
+    line-height: 50px;
+}
+
+#edit-button {
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+.product-amount {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#back-button {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.5em;
+}
+
+.category-name {
+    font-size: 0.7em;
+    margin-top: -15px;
+    margin-left: 7px;
+}
