@@ -3,8 +3,6 @@
     border-radius: 30px;
     width: 360px;
     height: 640px;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     font-family: 'Rambla';
 }
@@ -14,8 +12,17 @@
     border-radius: 5px;
 }
 
+.center-text {
+    text-align: center;
+}
+
 .bluetext {
     color: #4478A9;
+}
+
+.margin-center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #title {
@@ -30,8 +37,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .list-list {
@@ -51,7 +56,7 @@
     margin-bottom: 10px;
 }
 
-#plus {
+.plus {
     float: right;
     width: 35px;
     height: 35px;
@@ -59,10 +64,10 @@
     line-height: 35px;
     font-size: 1.5em;
     margin-right: 10px;
-    margin-top: -15px;
 }
 
-.list:hover, #plus:hover, #edit-button:hover, #back-button:hover {
+.list:hover, .plus:hover, #edit-button:hover, #back-button:hover, .product-amount-control:hover,
+#new-product-button:hover, #pin-button:hover, .big-button:hover {
     background-color: #4478A9;
     color: white;
     transition: 0.5s;
@@ -73,14 +78,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80%;
     font-size: 1.5em;
+    align-items: center;
 }
 
 #list-name {
-    line-height: 50px;
+    font-weight: bold;
+    font-size: 0.7em;
+    outline: none;
+    width: 50%;
+    height: 50px;
 }
 
 #edit-button {
@@ -91,20 +99,40 @@
 }
 
 
-.product-amount {
+.product-amount, #checked, .product-amount-control {
     width: 40px;
     height: 40px;
     line-height: 40px;
     text-align: center;
 }
 
+#checked {
+    accent-color: #4478A9;
+    outline: 1px solid #4478A9;
+    border: none;
+}
+
 .product {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+}
+
+#product-list {
+    width: 90%;
+    text-align: left;
+    max-height: 400px;
+    overflow: scroll;
+}
+
+#product-list::-webkit-scrollbar {
+    display: none;
+}
+
+.name-and-category {
+    font-weight: 400;
 }
 
 #back-button {
@@ -120,6 +148,58 @@
 
 .category-name {
     font-size: 0.7em;
-    margin-top: -15px;
+    margin-top: -25px;
     margin-left: 7px;
 }
+
+.product-view-items {
+    display: flex;
+    flex-direction: row;
+}
+
+#new-product-button {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#list-controls {
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+#pin-button {
+    width: 55px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#new-product-form {
+    margin-top: 40px;
+    width: 90%;
+}
+
+.new-product-input {
+    width: 200px;
+    height: 50px;
+    outline: none;
+}
+
+#product-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.big-button {
+    width: 70px;
+    height: 45px;
+    line-height: 45px;
+}
+

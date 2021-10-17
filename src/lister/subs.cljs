@@ -26,3 +26,7 @@
 (re/reg-sub ::active-list
   (fn [db]
     (:active-list db)))
+
+(re/reg-sub ::new-product
+  (fn [db]
+    (:new-product db)))
