@@ -25,23 +25,30 @@
     margin-right: auto;
 }
 
+.hoverable:hover {
+    background-color: #4478A9;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 #title {
-    text-align: center;
     margin-top: 0.5em;
-    min-width: 100px;
 }
 
 #list-component {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 70%;
+    margin-top: 10px;
+    width: 85%;
+    overflow: scroll;
+    max-height: 500px;
 }
 
 .list-list {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -51,32 +58,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    margin-right: 30px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .plus {
     float: right;
     width: 35px;
     height: 35px;
-    text-align: center;
     line-height: 35px;
     font-size: 1.5em;
     margin-right: 10px;
 }
 
-.list:hover, .plus:hover, #edit-button:hover, #back-button:hover, .product-amount-control:hover,
-#new-product-button:hover, #pin-button:hover, .big-button:hover {
-    background-color: #4478A9;
-    color: white;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-#list-view-top {
-    display: flex;
-    flex-direction: row;
+.list-view-top {
     justify-content: space-around;
     width: 80%;
     font-size: 1.5em;
@@ -91,31 +87,21 @@
     height: 50px;
 }
 
-#edit-button {
-    width: 80px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-}
-
-
 .product-amount, #checked, .product-amount-control {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    text-align: center;
+    margin-right: 1px;
+    margin-left: 1px;
 }
 
 #checked {
     accent-color: #4478A9;
-    outline: 1px solid #4478A9;
-    border: none;
+    margin-top: 2px;
 }
 
 .product {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -127,7 +113,7 @@
     overflow: scroll;
 }
 
-#product-list::-webkit-scrollbar {
+#product-list::-webkit-scrollbar, #list-component::-webkit-scrollbar {
     display: none;
 }
 
@@ -135,11 +121,10 @@
     font-weight: 400;
 }
 
-#back-button {
+.back-button {
     width: 50px;
     height: 50px;
     line-height: 50px;
-    text-align: center;
 }
 
 .product-name {
@@ -152,21 +137,13 @@
     margin-left: 7px;
 }
 
-.product-view-items {
-    display: flex;
-    flex-direction: row;
-}
-
 #new-product-button {
-    text-align: center;
     width: 200px;
     height: 40px;
     line-height: 40px;
 }
 
 #list-controls {
-    display: flex;
-    flex-direction: row;
     float: right;
 }
 
@@ -174,7 +151,6 @@
     width: 55px;
     height: 35px;
     line-height: 35px;
-    text-align: center;
     margin-right: 20px;
 }
 
@@ -190,8 +166,6 @@
 }
 
 #product-buttons {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin-top: 40px;
     width: 50%;
