@@ -28,7 +28,7 @@
       [:th [:select.new-product-input.bluetext.blueborder
             {:type "select"
              :value category
-             :on-change #(re/dispatch [::events/update-new-product-category (-> % .-value)])}
+             :on-change #(re/dispatch [::events/update-new-product-category (js/parseInt (-> % .-target .-value))])}
             options]]]]]
    [:div#product-buttons.margin-center.flex-row
       [:div.big-button.bluetext.blueborder.center-text.hoverable
