@@ -72,7 +72,7 @@
        [:input#checked {:type "Checkbox"
                         :checked checked
                         :on-change #(re/dispatch [::events/toggle-checked id])}]]
-     [:div.product-amount-control.bluetext.blueborder.center-text
+     [:div.product-amount-control.bluetext.blueborder.center-text.hoverable
            {:on-click #(re/dispatch [::events/add-product-to-list id])} "+"])]))
 
 (defn search-view []
