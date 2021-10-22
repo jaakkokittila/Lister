@@ -42,14 +42,20 @@
     (let [active-list-id (:active-list db)]
       (assoc-in db [:lists active-list-id :name] new-name))))
 
-(re/reg-event-db ::update-product-amount 
-  (fn [db [_ product-id operation]]
+(re/reg-event-db ::remove-from-list
+  (fn [db [_ product-id]]
+    (let [active-list-id (:active-list db)]
+     (update-in db [:lists active-list-id :products] dissoc product-id))))
+
+(re/reg-event-fx ::update-product-amount 
+  (fn [{db :db} [_ product-id operation]]
     (let [active-list-id (:active-list db)
           current-amount (get-in db [:lists active-list-id :products product-id :amount])]
       (if operation
-        (update-in db [:lists active-list-id :products product-id :amount] inc)
-        (when (> current-amount 0)
-         (update-in db [:lists active-list-id :products product-id :amount] dec))))))
+        {:db (update-in db [:lists active-list-id :products product-id :amount] inc)}
+        (if (> current-amount 1)
+          {:db (update-in db [:lists active-list-id :products product-id :amount] dec)}
+          {:dispatch [::remove-from-list product-id]})))))
 
 (re/reg-event-db ::update-search
   (fn [db [_ search]]
