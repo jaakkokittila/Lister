@@ -24,7 +24,6 @@
            4 {:id 4 :name "Shopping list 4" :pinned false :products {1 {:product 1 :amount 3 :checked false}
                                                                      2 {:product 2 :amount 1 :checked true}
                                                                      5 {:product 5 :amount 2 :checked false}}}}
-   :edit-mode false
    :search nil
    :new-product nil
    :active-list nil})
